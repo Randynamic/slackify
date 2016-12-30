@@ -13,7 +13,7 @@ import styles from './Styles/PresentationScreenStyle'
 class PresentationScreen extends React.Component {
   render () {
     let loginView
-    if (this.props.data) {
+    if (this.props.data && this.props.data.ok) {
       loginView = <View style={styles.centered}>
         <Text>{this.props.data.team}</Text>
         <Text>{this.props.data.user}</Text>
