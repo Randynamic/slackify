@@ -1,8 +1,9 @@
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce'
+const TESTTOKEN = '' // replace with own token
 
 // our "constructor"
-const create = (baseURL = 'http://api.openweathermap.org/data/2.5/') => {
+const create = (baseURL = 'https://slack.com/api/') => {
   // ------
   // STEP 1
   // ------
@@ -22,7 +23,8 @@ const create = (baseURL = 'http://api.openweathermap.org/data/2.5/') => {
 
   // Force OpenWeather API Key on all requests
   api.addRequestTransform((request) => {
-    request.params['APPID'] = '0e44183e8d1018fc92eb3307d885379c'
+    request.params['token'] = TESTTOKEN
+    request.params['pretty'] = '1'
   })
 
   // Wrap api's addMonitor to allow the calling code to attach
@@ -46,7 +48,7 @@ const create = (baseURL = 'http://api.openweathermap.org/data/2.5/') => {
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
   //
-  const getCity = (city) => api.get('weather', {q: city})
+  const getUserInfo = (city) => api.get('auth.test')
 
   // ------
   // STEP 3
@@ -62,7 +64,7 @@ const create = (baseURL = 'http://api.openweathermap.org/data/2.5/') => {
   //
   return {
     // a list of the API functions from step 2
-    getCity
+    getUserInfo
   }
 }
 
