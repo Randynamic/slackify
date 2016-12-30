@@ -29,6 +29,7 @@ export default StyleSheet.create({
     color: Colors.steel
   },
   loginRow: {
+    paddingTop: Metrics.doubleBaseMargin,
     paddingBottom: Metrics.doubleBaseMargin,
     paddingHorizontal: Metrics.doubleBaseMargin,
     flexDirection: 'row'
