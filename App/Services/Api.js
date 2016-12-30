@@ -1,6 +1,6 @@
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce'
-const TESTTOKEN = '' // replace with own token
+const TESTTOKEN = 'xoxp-60671757248-60708007718-122077834708-4355e9a6fe1e9c4dedc6dad46701843b' // replace with own token
 
 // our "constructor"
 const create = (baseURL = 'https://slack.com/api/') => {
@@ -48,7 +48,8 @@ const create = (baseURL = 'https://slack.com/api/') => {
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
   //
-  const getUserInfo = (city) => api.get('auth.test')
+  const getUserAuth = () => api.get('auth.test')
+  const getUserInfo = (user) => { console.log(user); return api.get('users.info', {user}) }
 
   // ------
   // STEP 3
@@ -64,7 +65,8 @@ const create = (baseURL = 'https://slack.com/api/') => {
   //
   return {
     // a list of the API functions from step 2
-    getUserInfo
+    getUserInfo,
+    getUserAuth
   }
 }
 

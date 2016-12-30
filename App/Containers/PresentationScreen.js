@@ -16,7 +16,8 @@ class PresentationScreen extends React.Component {
     if (this.props.data && this.props.data.ok) {
       loginView = <View style={styles.centered}>
         <Text>{this.props.data.team}</Text>
-        <Text>{this.props.data.user}</Text>
+        <Text>{this.props.data.user.real_name}</Text>
+        <Image source={{uri: this.props.data.user.profile.image_1024}} style={styles.logo} />
         <Text>{this.props.data.url}</Text>
       </View>
     } else {
