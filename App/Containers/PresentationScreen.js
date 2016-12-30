@@ -18,6 +18,7 @@ class PresentationScreen extends React.Component {
         <Text>{this.props.data.team}</Text>
         <Text>{this.props.data.user}</Text>
         <Text>{this.props.data.url}</Text>
+        <Image source={Images.pirate} style={styles.logo} />
       </View>
     } else {
       loginView = <View>
