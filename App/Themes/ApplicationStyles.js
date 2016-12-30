@@ -23,7 +23,8 @@ const ApplicationStyles = {
     },
     container: {
       flex: 1,
-      paddingTop: Metrics.baseMargin
+      paddingTop: Metrics.baseMargin,
+      backgroundColor: '#rgba(233, 233, 233, .4)'
     },
     section: {
       margin: Metrics.section,

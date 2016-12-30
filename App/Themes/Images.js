@@ -4,9 +4,8 @@
 const images = {
   logo: require('../Images/ir.png'),
   clearLogo: require('../Images/top_logo.png'),
-  ignite: require('../Images/ignite_logo.png'),
-  tileBg: require('../Images/tile_bg.png'),
-  background: require('../Images/BG.png')
+  slackify: require('../Images/slackify_logo.png'),
+  tileBg: require('../Images/tile_bg.png')
 }
 
 export default images
