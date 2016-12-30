@@ -19,6 +19,7 @@ class PresentationScreen extends React.Component {
         <Text>{this.props.data.user.real_name}</Text>
         <Image source={{uri: this.props.data.user.profile.image_1024}} style={styles.logo} />
         <Text>{this.props.data.url}</Text>
+        <Image source={Images.pirate} style={styles.logo} />
       </View>
     } else {
       loginView = <View>

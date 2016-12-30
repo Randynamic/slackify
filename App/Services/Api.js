@@ -1,6 +1,6 @@
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce'
-const TESTTOKEN = 'xoxp-60671757248-60708007718-122077834708-4355e9a6fe1e9c4dedc6dad46701843b' // replace with own token
+const TESTTOKEN = '' // replace with own token
 
 // our "constructor"
 const create = (baseURL = 'https://slack.com/api/') => {
